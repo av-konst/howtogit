@@ -45,3 +45,19 @@
 
 ## HEAD
 HEAD – это указатель на коммит в репозитории, который станет родителем следующего коммита.
+
+
+## Статусы 
+* untracked - неотслеживаемые файлы
+* modified - измененные файлы 
+* staged - индексированные файлы.
+* tracked/comitted - файлы, уже сохраненные в локальном репозитории.
+
+
+```mermaid
+graph LR;
+  untracked -- "git add" --> staged;
+  staged    -- "git commit"     --> tracked/comitted;
+  tracked/comitted    -- "editing file"     --> modified;
+
+``` 
